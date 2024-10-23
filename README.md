@@ -64,6 +64,16 @@ npm start
 
 Open your browser: Visit http://localhost:3000 to view the application.
 
+Interacting with the Application
+Fill in the Account Address: Enter your Aptos account address. If you don’t have one, you can create it using the Aptos CLI.
+Enter the Token URI: Provide the metadata URI for your NFT. This should point to a JSON file hosted on IPFS, GitHub Pages, or a cloud storage service.
+Click the "Mint NFT" button: This will initiate the minting process. You will see loading feedback, and upon success, a success message will be displayed.
+Troubleshooting
+"Failed to mint NFT.": Check the following:
+Ensure your account address is correct and funded.
+Verify the token URI points to a valid JSON file containing NFT metadata.
+Move compilation issues: Make sure you have installed all dependencies correctly and that your smart contract code is error-free.
+
 
 This README provides a comprehensive overview of the project, including setup instructions, usage guidelines, and troubleshooting tips. You can adjust the sections or add additional details based on your project's specific features or requirements. Let me know if you need any more help!
 
