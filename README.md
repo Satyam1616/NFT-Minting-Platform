@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# NFT Minting Platform on Aptos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple NFT minting platform built on the Aptos blockchain. It allows users to mint their own NFTs by providing their account address and a token URI that points to the NFT metadata.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+  - [Smart Contract Development](#smart-contract-development)
+  - [Frontend Development](#frontend-development)
+- [Running the Application](#running-the-application)
+- [Interacting with the Application](#interacting-with-the-application)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before you begin, ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
+- Aptos CLI
+- A code editor (like VS Code)
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Smart Contract Development
 
-### `npm run build`
+1. **Install Aptos CLI**:
+   Follow the instructions in the [Aptos CLI documentation](https://aptos.dev/tutorials/cli) to install the Aptos CLI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Create a new Aptos project**:
+   ```bash
+   mkdir nft_minting
+   cd nft_minting
+   aptos move init
+Implement the NFT minting smart contract: Create a new file in the move directory called nft_minting.move and add your smart contract code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Compile the contract:
+aptos move compile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Publish the package: Make sure your profile is set to devnet or testnet in the Aptos configuration
+aptos move publish --package-dir move --profile devnet
 
-### `npm run eject`
+Frontend Development
+Create a new React app: In a separate directory, create your React app using Create React App.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npx create-react-app aptos-nft-minting
+cd aptos-nft-minting
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+nstall dependencies: Install the Aptos SDK:
+npm install aptos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create the MintNFT component: Create a new folder named components and a file named MintNFT.js for your NFT minting component. Copy the minting logic into this file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Add styling: Create a App.css file in the src directory and add the provided CSS styles.
 
-## Learn More
+Import the MintNFT component in App.js: Update src/App.js to include the MintNFT component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Running the Application
+Start your React app: In the terminal, navigate to the aptos-nft-minting directory and run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm start
 
-### Code Splitting
+Open your browser: Visit http://localhost:3000 to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+This README provides a comprehensive overview of the project, including setup instructions, usage guidelines, and troubleshooting tips. You can adjust the sections or add additional details based on your project's specific features or requirements. Let me know if you need any more help!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
