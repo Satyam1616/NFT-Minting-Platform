@@ -1,0 +1,10 @@
+
+[package]
+name = "nft_minting"
+version = "0.0.1"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core", subdir = "aptos-move/framework", rev = "devnet" }
+
+[addresses]
+AptosFramework = "0x1"
